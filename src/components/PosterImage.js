@@ -10,9 +10,9 @@ const propTypes = {
 };
 
 function PosterImage({ poster, player, actions, className }) {
-  if (!poster || player.hasStarted) {
-    return null;
-  }
+  // if (!poster || player.hasStarted) {
+  //   return null;
+  // }
 
   return (
     <div

@@ -999,9 +999,9 @@ function PosterImage(_ref) {
       actions = _ref.actions,
       className = _ref.className;
 
-  if (!poster || player.hasStarted) {
-    return null;
-  }
+  // if (!poster || player.hasStarted) {
+  //   return null;
+  // }
 
   return React__default.createElement('div', {
     className: classNames('video-react-poster', className),
