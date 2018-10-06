@@ -1157,8 +1157,8 @@ var propTypes$4 = {
   autoPlay: PropTypes.bool,
 
   playsInline: PropTypes.bool,
-  webkitPlaysInline: PropTypes.bool,
-  x5PlaysInline: PropTypes.bool,
+  webkitPlaysInline: PropTypes.string,
+  x5PlaysInline: PropTypes.string,
   x5VideoPlayerType: PropTypes.string,
 
   src: PropTypes.string,
