@@ -534,6 +534,7 @@ export default class Video extends Component {
       'x5-playsinline': x5PlaysInline,
       'x5-video-player-type': x5VideoPlayerType
     }
+    console.log('render:', specialProps);
     return (
       <video
         className={classNames(

@@ -1823,6 +1823,7 @@ var Video = function (_Component) {
         'x5-playsinline': x5PlaysInline,
         'x5-video-player-type': x5VideoPlayerType
       };
+      console.log('render:', specialProps);
       return React.createElement(
         'video',
         _extends({
