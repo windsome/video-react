@@ -12,7 +12,12 @@ const propTypes = {
   loop: PropTypes.bool,
   muted: PropTypes.bool,
   autoPlay: PropTypes.bool,
+
   playsInline: PropTypes.bool,
+  webkitPlaysInline: PropTypes.bool,
+  x5PlaysInline: PropTypes.bool,
+  x5VideoPlayerType: PropTypes.string,
+
   src: PropTypes.string,
   poster: PropTypes.string,
   className: PropTypes.string,
@@ -519,9 +524,16 @@ export default class Video extends Component {
   render() {
     const {
       loop, poster, preload, src, autoPlay,
-      playsInline, muted, crossOrigin, videoId
+      muted, crossOrigin, videoId,
+      playsInline, webkitPlaysInline, x5PlaysInline, x5VideoPlayerType
     } = this.props;
 
+    let specialProps = {
+      playsInline,
+      'webkit-playsinline': webkitPlaysInline,
+      'x5-playsinline': x5PlaysInline,
+      'x5-video-player-type': x5VideoPlayerType
+    }
     return (
       <video
         className={classNames(
@@ -534,9 +546,7 @@ export default class Video extends Component {
         muted={muted}
         preload={preload}
         loop={loop}
-        playsInline={playsInline}
-        webkit-playsinline={""}
-        x5-playsinline={""}
+        {...specialProps}
         autoPlay={autoPlay}
         poster={poster}
         src={src}
